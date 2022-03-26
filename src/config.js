@@ -34,6 +34,8 @@ pages:
           - author: Bob Jones
             title: Super VIP
             content: Change my life
+      services:
+        title: My Services
 services:
   - Name: Basic Clean
     Description: A basic clean of your house

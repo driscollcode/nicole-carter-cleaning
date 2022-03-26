@@ -300,7 +300,7 @@ export default class Index extends Component {
 							</div>
 							<div className="col-8">
 								<div className="price-head">
-									<h3>Office Cleaning</h3>
+									<h3>{this.state.app.config().pages.homepage.sections.services.title}</h3>
 								</div>
 								<div className="price-block">
 
