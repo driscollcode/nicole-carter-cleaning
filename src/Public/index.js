@@ -107,7 +107,7 @@ export default class Index extends Component {
 								<div className="navigation">
 									<div id="navigation">
 										<ul>
-											<li className="active"><a href="index.html" title="Home">Home</a></li>
+											<li className="active"><a href="/" title="Home">Home</a></li>
 
 										</ul>
 									</div>

@@ -46,16 +46,7 @@ class Application extends Component {
 
                     {/* Catch All */}
                     <Route render={routeProps => (
-
-                        <Session state={this.state}>
-                            <Page
-                                state = {this.state}
-                                title = "MyHours.me"
-                                pageSubCaption = ""
-                            >
-                                <SiteRoot state={this.state} />
-                            </Page>
-                        </Session>
+                        <Redirect to="/" />
                     )}/>
                 </Switch>
             </Router>
