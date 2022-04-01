@@ -184,7 +184,6 @@ export default class Index extends Component {
 									<div className="service-content">
 										<h3><a href="#">{this.state.app.config().services[0].Name}</a></h3>
 										<p>{this.state.app.config().services[0].Description}</p>
-										<a href="#" className="btn-link"> read more</a>
 									</div>
 								</div>
 							</div>
@@ -194,7 +193,6 @@ export default class Index extends Component {
 									<div className="service-content">
 										<h3><a href="#">{this.state.app.config().services[1].Name}</a></h3>
 										<p>{this.state.app.config().services[1].Description}</p>
-										<a href="#" className="btn-link"> read more</a>
 									</div>
 								</div>
 							</div>
@@ -204,7 +202,6 @@ export default class Index extends Component {
 									<div className="service-content">
 										<h3><a href="#">{this.state.app.config().services[2].Name}</a></h3>
 										<p>{this.state.app.config().services[2].Description}</p>
-										<a href="#" className="btn-link"> read more</a>
 									</div>
 								</div>
 							</div>
@@ -306,7 +303,7 @@ export default class Index extends Component {
 
 									{cleaningServicesPricing}
 
-									<div className="text-center mt30"><a href="#" className="btn btn-primary btn-sm">book your order now</a></div>
+									<div className="text-center mt30"><a href="#" className="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalMakeABooking">book your order now</a></div>
 								</div>
 							</div>
 							<div className="col-2">
@@ -434,6 +431,25 @@ export default class Index extends Component {
 						</div>
 
 					</div>
+				</div>
+
+				<div className="modal fade" id="modalMakeABooking" tabIndex="-1" role="dialog" aria-labelledby="modalMakeABooking" aria-hidden="true">
+				  <div className="modal-dialog modal-dialog-centered" role="document">
+					<div className="modal-content">
+					  <div className="modal-header">
+						<h3 className="modal-title" id="exampleModalLongTitle">Make A Booking</h3>
+					  </div>
+					  <div className="modal-body">
+						<p>
+							Thanks for your interest - to make a booking please contact me by phone or email.
+						</p>
+						<ul>
+							<li><strong>Email:</strong> {this.state.app.config().contact.email}</li>
+							<li><strong>Mobile:</strong> {this.state.app.config().contact.mobile}</li>
+						</ul>
+					  </div>
+					</div>
+				  </div>
 				</div>
 
 			</span>
