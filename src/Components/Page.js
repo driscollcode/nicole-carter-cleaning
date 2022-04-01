@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import Menu from './Menu'
-import Data from './Data'
 import {Link, Redirect} from "react-router-dom";
 
 function Page(props) {
@@ -13,7 +11,6 @@ function Page(props) {
     return (
 
         <>
-            <Menu state={props.state} />
             <main className="main" role="main">
 
                 <style id="search_style"></style>

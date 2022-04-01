@@ -12,9 +12,6 @@ import App from './Components/Application'
 import Page from './Components/Page'
 import Session from './Components/Session'
 import SiteRoot from './Public/index'
-import Projects from './Secure/projects'
-import TimeSheets from './Secure/timesheets'
-import Teams from './Secure/teams'
 import config from './config.js'
 import Yaml from "js-yaml";
 

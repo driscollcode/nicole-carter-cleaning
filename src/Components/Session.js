@@ -1,7 +1,6 @@
 import {Redirect} from "react-router-dom";
 import React from "react";
 import JWT from "./JWT";
-import Data from "./Data";
 
 export default function Session(props) {
     if(!props.state.app.isLoggedIn()) {

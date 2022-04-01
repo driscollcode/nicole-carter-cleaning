@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import AppleLogin from 'react-apple-login'
 import GoogleLogin from 'react-google-login'
 import JWT from '../Components/JWT'
-import Data from '../Components/Data'
 import {Link, Redirect} from "react-router-dom";
 
 export default class Index extends Component {
@@ -10,44 +9,9 @@ export default class Index extends Component {
     constructor(props) {
         super(props)
         this.state = props.state;
-        this.onSuccess = this.onSuccess.bind(this);
     }
 
-    onFailure() {
-
-	}
-
-	onSuccess(response) {
-		this.setState({
-			isLoading: true
-		})
-
-		fetch(this.state.app.config().api.endpoints.login.google + Object.values(response)[1].id_token, {
-			method: 'GET',
-		}).then(function(response) {
-			return response.text();
-		}).then(function(data) {
-			var token = JWT(data)
-			if(token.valid) {
-				token.content.User = JSON.parse(token.content.User)
-
-				this.state.app.login(token.content.User.ID)
-				this.state.app.set('jwt', data, 'user-credentials')
-				this.state.app.set('token', token, 'user-credentials')
-				this.state.app.set('user', token.content.User, 'user-credentials')
-				Data(this.state, data)
-
-				this.setState({
-					// moveToLoggedIn: true
-				})
-			}
-		}.bind(this))
-	}
-
     render() {
-    	if(this.state.moveToLoggedIn) {
-			return <Redirect to='/my/timesheets' />
-		}
 
 		var cleaningServicesPricing = this.state.app.config().services.map((item, key) =>
 			<div className="price-content">
@@ -110,54 +74,6 @@ export default class Index extends Component {
 											<li className="active"><a href="/" title="Home">Home</a></li>
 
 										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-							<div className="slider">
-					<div className="owl-carousel slider">
-						<div className="item">
-							<div className="slider-img"> <img src="/images/slider-1.jpg" alt="" /></div>
-							<div className="container">
-								<div className="row">
-									<div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-										<div className="slider-captions">
-											<h1 className="slider-title">Domestic &amp; Commercial Cleaning</h1>
-											<p className="slider-text hidden-xs">Cleaning Services we are passionate about providing
-										a flexible service.</p>
-											<a href="about.html" className="btn btn-default btn-lg hidden-sm hidden-xs">Click Here for a Free Estimate</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="item">
-							<div className="slider-img"><img src="/images/slider-2.jpg" alt="" /></div>
-							<div className="container">
-								<div className="row">
-									<div className="col-lg-5 col-md-5 col-sm-12  col-xs-12">
-										<div className="slider-captions">
-											<h1 className="slider-title">We help you to keep your place clean</h1>
-											<p className="slider-text hidden-xs">We use specialize and quality equipment tools for cleaning ! </p>
-											<a href="#" className="btn btn-default btn-lg hidden-sm hidden-xs">meet team</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="item">
-							<div className="slider-img"><img src="/images/slider-3.jpg" alt="" /></div>
-							<div className="container">
-								<div className="row">
-									<div className="col-lg-5 col-md-5 col-sm-12  col-xs-12">
-										<div className="slider-captions">
-											<h1 className="slider-title">Quality work with Affordable price</h1>
-											<p className="slider-text hidden-xs">We brings professional cleaning services right to your home. </p>
-											<a href="#" className="btn btn-default btn-lg hidden-sm hidden-xs">view services</a>
-										</div>
 									</div>
 								</div>
 							</div>
