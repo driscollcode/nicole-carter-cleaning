@@ -46,6 +46,8 @@ pages:
       I love a great end result and I feel like cleaning is my role. I’ve never received a complaint and I can say with a great smile on my face that i have always completed a job within the estimated time frame.
       I can work around your schedule. I’m okay with pets and children. I understand babysitters are not always at hand so please don’t feel bothered by this.
 global:
+  header:
+    socialMedia: false
   footer:
     aboutMessage: |-
       I am Nicole Carter. I have many years experience providing a quality, friendly and flexible cleaning service. I look forward to working with you.
@@ -68,7 +70,6 @@ services:
     Price: 200
     Sessions: 6
     Hours: 8
-    
 application:
   id: nicole-carter-cleaning
 `

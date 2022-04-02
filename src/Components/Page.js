@@ -15,15 +15,23 @@ function Page(props) {
                 <div className="container">
                     <div className="row pb-3 pb-md-0">
                         <div className="col-md-6 hidden-sm hidden-xs">
-                            <div className="social">
-                                <ul>
-                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i className="fa fa-pinterest"></i></a></li>
-                                </ul>
-                            </div>
+                            {(() => {
+
+                                if(props.state.app.config().global.header.socialMedia) {
+                                    return (
+                                        <div className="social">
+                                            <ul>
+                                                <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+                                                <li><a href="#"><i className="fa fa-google-plus"></i></a></li>
+                                                <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
+                                                <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+                                                <li><a href="#"><i className="fa fa-pinterest"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    )
+                                }
+
+                            })()}
                         </div>
                         <div className="col-8 col-md-3">
                             <div className="call-info">
