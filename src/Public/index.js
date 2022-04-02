@@ -236,8 +236,8 @@ export default class Index extends Component {
 							Thanks for your interest - to make a booking please contact me by phone or email.
 						</p>
 						<ul>
-							<li><strong>Email:</strong> <a href={"mailto:" + this.state.app.config().contact.email}>{this.state.app.config().contact.email}</a></li>
 							<li><strong>Mobile:</strong><a href={"tel:" + this.state.app.config().contact.mobile}>{this.state.app.config().contact.mobile}</a></li>
+							<li><strong>Email:</strong> <a href={"mailto:" + this.state.app.config().contact.email}>{this.state.app.config().contact.email}</a></li>
 						</ul>
 					  </div>
 					</div>
