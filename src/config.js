@@ -1,7 +1,7 @@
 const config = `
 contact:
   mobile: 07931 756 126
-  email: info@nicolecartercleaning.com
+  email: nicolepotter462@yahoo.com
 pages:
   homepage:
     menu:
