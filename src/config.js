@@ -36,6 +36,19 @@ pages:
             content: Change my life
       services:
         title: My Services
+  about:
+    title: A professional cleaning service
+    photo:
+        title: Nicole Carter
+        caption: Cleaning Services
+    caption: |-
+      My name is Nicole. I’ve been doing cleaning on and off for around 5 years now. I stopped when I decided to open my own business. Unfortunately due to covid that went downhill so I have started to clean again.
+      I love a great end result and I feel like cleaning is my role. I’ve never received a complaint and I can say with a great smile on my face that i have always completed a job within the estimated time frame.
+      I can work around your schedule. I’m okay with pets and children. I understand babysitters are not always at hand so please don’t feel bothered by this.
+global:
+  footer:
+    aboutMessage: |-
+      I am Nicole Carter. I have many years experience providing a quality, friendly and flexible cleaning service. I look forward to working with you.
 services:
   - Name: Basic Clean
     Description: A basic clean of your house

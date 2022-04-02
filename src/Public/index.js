@@ -1,7 +1,4 @@
 import React, {Component} from 'react'
-import AppleLogin from 'react-apple-login'
-import GoogleLogin from 'react-google-login'
-import JWT from '../Components/JWT'
 import {Link, Redirect} from "react-router-dom";
 
 export default class Index extends Component {
@@ -26,60 +23,6 @@ export default class Index extends Component {
 
         return (
             <span>
-
-				<div className="top-bar">
-					<div className="container">
-						<div className="row">
-							<div className="col-md-6 hidden-sm hidden-xs">
-								<div className="social">
-									<ul>
-										<li><a href="#"><i className="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i className="fa fa-google-plus"></i></a></li>
-										<li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-										<li><a href="#"><i className="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i className="fa fa-pinterest"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div className="col-md-3 hidden-sm hidden-xs">
-								<div className="call-info">
-									<p className="call-text"><i
-										className="fa fa-envelope-open-o"></i><strong>{this.state.app.config().contact.email}</strong></p>
-								</div>
-							</div>
-							<div className="col-md-3 col-sm-12">
-								<div className="call-info">
-									<p className="call-text"><i
-										className="fa fa-phone"></i><strong>Call Now: {this.state.app.config().contact.mobile}</strong></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div className="header-wrapper">
-					<div className="container">
-						<div className="row">
-							<div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-								<h3 style={{paddingTop: 10+'px'}} className="hidden visible-sm visible-md visible-lg">
-									<a href="/">{this.state.app.config().pages.homepage.menu.title}</a>
-								</h3>
-								<h3 style={{paddingTop: 10+'px'}} className="hidden visible-xs text-center">
-									<a href="/">{this.state.app.config().pages.homepage.menu.title}</a>
-								</h3>
-							</div>
-							<div className="col-lg-9 col-md-6 col-sm-6 col-xs-12">
-								<div className="navigation">
-									<div id="navigation">
-										<ul>
-											<li className="active"><a href="/" title="Home">Home</a></li>
-
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 
 							<div className="space-medium">
 					<div className="container">
@@ -279,73 +222,6 @@ export default class Index extends Component {
 								<h1>Any questions? Call Now: {this.state.app.config().contact.mobile}</h1>
 							</div>
 						</div>
-					</div>
-				</div>
-
-							<div className="footer">
-					<div className="container">
-						<div className="row">
-
-							<div className="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-								<div className="footer-widget">
-									<h3 className="footer-title">About Nicole Carter</h3>
-									<p>
-										I am Nicole Carter. I have many years experience providing a quality, friendly and flexible cleaning service.
-										I look forward to working with you.
-									</p>
-									<div className="">
-										<ul>
-											<li><div className=""><i className="fa fa-envelope-open"></i></div><div
-												className="footer-address">info@nicolecartercleaning.com</div></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-
-							<div className=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
-								<div className="footer-widget">
-									<h3 className="footer-title">Our Services</h3>
-									<ul>
-										<li><a href="#">Home Cleaning </a></li>
-										<li><a href="#">Office Cleaning </a></li>
-										<li><a href="#">Commercial Cleaning</a></li>
-									</ul>
-								</div>
-							</div>
-
-							<div className=" col-lg-2 col-md-2 col-sm-2 col-xs-12">
-								<div className="footer-widget">
-									<h3 className="footer-title">Quick Links</h3>
-									<ul>
-										<li><a href="#">About us </a></li>
-										<li><a href="#">Services </a></li>
-										<li><a href="#">Blog</a></li>
-										<li><a href="#">Testimonials </a></li>
-										<li> <a href="#">Pricing</a></li>
-									</ul>
-								</div>
-							</div>
-
-							<div className="col-lg-2 col-md-3 col-sm-2 col-xs-12 ">
-								<div className="footer-widget">
-									<h3 className="footer-title">Share With us</h3>
-									<div className="footer-social"> <a href="#"><span><i className="fa fa-facebook"></i></span></a> <a
-										href="#"><span><i className="fa fa-google-plus"></i></span> </a> <a href="#"><span
-										className="active"><i className="fa fa-twitter"></i> </span></a> <a href="#"><span><i
-										className=" fa fa-pinterest"></i> </span></a> <a href="#"><span><i
-										className="fa fa-linkedin"></i></span></a> </div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-							<div className="tiny-footer">
-					<div className="container">
-						<div className="row">
-							<div className="col-md-12">copyright@cleaning. All right reserved</div>
-						</div>
-
 					</div>
 				</div>
 

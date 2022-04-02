@@ -12,8 +12,7 @@ import App from './Components/Application'
 import Page from './Components/Page'
 import Session from './Components/Session'
 import SiteRoot from './Public/index'
-import config from './config.js'
-import Yaml from "js-yaml";
+import AboutPage from './Public/about'
 
 class Application extends Component {
 
@@ -33,12 +32,24 @@ class Application extends Component {
             <Router>
                 <Switch>
 
-                    {/* Public Pages */}
+                    {/* Homepage */}
                     <Route exact path="/" render={routeProps => (
 
-                        <Session state={this.state}>
-                            <SiteRoot state={this.state} />
-                        </Session>
+                        <Page state={this.state}>
+                            <Session state={this.state}>
+                                <SiteRoot state={this.state} />
+                            </Session>
+                        </Page>
+                    )}/>
+
+                    {/* About Page */}
+                    <Route exact path="/about" render={routeProps => (
+
+                        <Page state={this.state}>
+                            <Session state={this.state}>
+                                <AboutPage state={this.state} />
+                            </Session>
+                        </Page>
                     )}/>
 
                     {/* Catch All */}

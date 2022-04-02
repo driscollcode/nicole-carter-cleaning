@@ -11,49 +11,126 @@ function Page(props) {
     return (
 
         <>
-            <main className="main" role="main">
+            <div className="top-bar">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-6 hidden-sm hidden-xs">
+                            <div className="social">
+                                <ul>
+                                    <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i className="fa fa-pinterest"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-md-3 hidden-sm hidden-xs">
+                            <div className="call-info">
+                                <p className="call-text"><i
+                                    className="fa fa-envelope-open-o"></i><strong>{props.state.app.config().contact.email}</strong></p>
+                            </div>
+                        </div>
+                        <div className="col-md-3 col-sm-12">
+                            <div className="call-info">
+                                <p className="call-text"><i
+                                    className="fa fa-phone"></i><strong>Call Now: {props.state.app.config().contact.mobile}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <style id="search_style"></style>
+            <div className="header-wrapper">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <h3 style={{paddingTop: 10+'px'}} className="hidden visible-sm visible-md visible-lg">
+                                <Link to="/">{props.state.app.config().pages.homepage.menu.title}</Link>
+                            </h3>
+                            <h3 style={{paddingTop: 10+'px'}} className="hidden visible-xs text-center">
+                                <Link to="/">{props.state.app.config().pages.homepage.menu.title}</Link>
+                            </h3>
+                        </div>
+                        <div className="col-lg-9 col-md-6 col-sm-6 col-xs-12">
+                            <div className="navigation">
+                                <div id="navigation">
+                                    <ul>
+                                        <li className="active"><Link to="/" title="Home">Home</Link></li>
+                                        <li><Link to="/about">About Me</Link></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <div className="pb-9 pt-2 bg-light">
-                    <div className="container">
+            {props.children}
 
-                        <nav aria-label="breadcrumb">
-                            <ol className="breadcrumb">
-                                {props.bookmarks}
-                                {(() => {
+            <div className="footer">
+                <div className="container">
+                    <div className="row">
 
-                                    if(props.bookmarks) {
-
-                                        return (
-
-                                            <li className="breadcrumb-item active" aria-current="page">{props.bookmarks[props.bookmarks.length - 1].label}</li>
-                                        )
-                                    }
-                                })()}
-                            </ol>
-                        </nav>
-
-                        <div className="row mb-2 mb-sm-2">
-                            <div className="col-md-8 mx-auto">
-                                <h1 className="h2 text-center">
-                                    {props.pageCaption}
-                                </h1>
+                        <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div className="footer-widget">
+                                <h3 className="footer-title">About Nicole Carter</h3>
+                                <p>
+                                    {props.state.app.config().global.footer.aboutMessage}
+                                </p>
+                                <div className="">
+                                    <ul>
+                                        <li><div className=""><i className="fa fa-envelope-open"></i></div><div
+                                            className="footer-address">info@nicolecartercleaning.com</div></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
-                        {props.children}
+                        <div className=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div className="footer-widget">
+                                <h3 className="footer-title">Our Services</h3>
+                                <ul>
+                                    <li><a href="#">Home Cleaning </a></li>
+                                    <li><a href="#">Office Cleaning </a></li>
+                                    <li><a href="#">Commercial Cleaning</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className=" col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                            <div className="footer-widget">
+                                <h3 className="footer-title">Quick Links</h3>
+                                <ul>
+                                    <li><a href="#">About us </a></li>
+                                    <li><a href="#">Services </a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Testimonials </a></li>
+                                    <li> <a href="#">Pricing</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-2 col-md-3 col-sm-2 col-xs-12 ">
+                            <div className="footer-widget">
+                                <h3 className="footer-title">Share With us</h3>
+                                <div className="footer-social"> <a href="#"><span><i className="fa fa-facebook"></i></span></a> <a
+                                    href="#"><span><i className="fa fa-google-plus"></i></span> </a> <a href="#"><span
+                                    className="active"><i className="fa fa-twitter"></i> </span></a> <a href="#"><span><i
+                                    className=" fa fa-pinterest"></i> </span></a> <a href="#"><span><i
+                                    className="fa fa-linkedin"></i></span></a> </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </main>
+            </div>
 
-            <div className="container">
-                <div className="row mt-4">
-                    <div className="col-12">
-                        <p className="text-center">
-                            &copy; 2020 MyHours.me - a division of Driscoll Ltd
-                        </p>
+            <div className="tiny-footer">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">copyright@cleaning. All right reserved</div>
                     </div>
+
                 </div>
             </div>
 
