@@ -151,10 +151,7 @@ export default class Index extends Component {
 							</div>
 						</div>
 						<div className="row">
-							<div className="col-2">
-
-							</div>
-							<div className="col-8">
+							<div className="col-12 col-lg-8 center-block">
 								<div className="price-head">
 									<h3>{this.state.app.config().pages.homepage.sections.services.title}</h3>
 								</div>
@@ -164,9 +161,6 @@ export default class Index extends Component {
 
 									<div className="text-center mt30"><a href="#" className="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalMakeABooking">book your order now</a></div>
 								</div>
-							</div>
-							<div className="col-2">
-
 							</div>
 						</div>
 					</div>

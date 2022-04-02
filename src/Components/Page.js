@@ -13,7 +13,7 @@ function Page(props) {
         <>
             <div className="top-bar">
                 <div className="container">
-                    <div className="row">
+                    <div className="row pb-3 pb-md-0">
                         <div className="col-md-6 hidden-sm hidden-xs">
                             <div className="social">
                                 <ul>
@@ -25,16 +25,21 @@ function Page(props) {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-md-3 hidden-sm hidden-xs">
+                        <div className="col-8 col-md-3">
                             <div className="call-info">
                                 <p className="call-text"><i
                                     className="fa fa-envelope-open-o"></i><strong><a href={"mailto:" + props.state.app.config().contact.email}>{props.state.app.config().contact.email}</a></strong></p>
                             </div>
                         </div>
-                        <div className="col-md-3 col-sm-12">
-                            <div className="call-info">
+                        <div className="col-4 col-md-3">
+                            <div className="call-info d-none d-md-block">
                                 <p className="call-text"><i
                                     className="fa fa-phone"></i><strong><a href={"tel:" + props.state.app.config().contact.mobile}>{props.state.app.config().contact.mobile}</a></strong></p>
+                            </div>
+                            <div className="call-info d-md-none">
+                                <p className="call-text text-right">
+                                    <i className="fa fa-phone"></i>
+                                    <strong><a href={"tel:" + props.state.app.config().contact.mobile}>{props.state.app.config().contact.mobile}</a></strong></p>
                             </div>
                         </div>
                     </div>
