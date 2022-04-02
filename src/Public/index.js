@@ -219,7 +219,7 @@ export default class Index extends Component {
 					<div className="container">
 						<div className="row">
 							<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<h1>Any questions? Call Now: {this.state.app.config().contact.mobile}</h1>
+								<h1>Any questions? Call Now: <a className="text-white" href={"tel:" + this.state.app.config().contact.mobile}>{this.state.app.config().contact.mobile}</a></h1>
 							</div>
 						</div>
 					</div>
@@ -236,8 +236,8 @@ export default class Index extends Component {
 							Thanks for your interest - to make a booking please contact me by phone or email.
 						</p>
 						<ul>
-							<li><strong>Email:</strong> {this.state.app.config().contact.email}</li>
-							<li><strong>Mobile:</strong> {this.state.app.config().contact.mobile}</li>
+							<li><strong>Email:</strong> <a href={"mailto:" + this.state.app.config().contact.email}>{this.state.app.config().contact.email}</a></li>
+							<li><strong>Mobile:</strong><a href={"tel:" + this.state.app.config().contact.mobile}>{this.state.app.config().contact.mobile}</a></li>
 						</ul>
 					  </div>
 					</div>

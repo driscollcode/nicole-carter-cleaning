@@ -28,13 +28,13 @@ function Page(props) {
                         <div className="col-md-3 hidden-sm hidden-xs">
                             <div className="call-info">
                                 <p className="call-text"><i
-                                    className="fa fa-envelope-open-o"></i><strong>{props.state.app.config().contact.email}</strong></p>
+                                    className="fa fa-envelope-open-o"></i><strong><a href={"mailto:" + props.state.app.config().contact.email}>{props.state.app.config().contact.email}</a></strong></p>
                             </div>
                         </div>
                         <div className="col-md-3 col-sm-12">
                             <div className="call-info">
                                 <p className="call-text"><i
-                                    className="fa fa-phone"></i><strong>Call Now: {props.state.app.config().contact.mobile}</strong></p>
+                                    className="fa fa-phone"></i><strong><a href={"tel:" + props.state.app.config().contact.mobile}>{props.state.app.config().contact.mobile}</a></strong></p>
                             </div>
                         </div>
                     </div>
