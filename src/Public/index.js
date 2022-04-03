@@ -201,11 +201,6 @@ export default class Index extends Component {
 								</div>
 							</div>
 						</div>
-						<div className="row mt30">
-							<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-								<a href="#" className="btn btn-default btn-lg">view our testimonials</a>
-							</div>
-						</div>
 					</div>
 				</div>
 

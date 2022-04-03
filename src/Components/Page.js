@@ -81,57 +81,16 @@ function Page(props) {
 
             {props.children}
 
-            <div className="footer">
+            <div className="footer pt-5 pb-5">
                 <div className="container">
-                    <div className="row">
+                    <div className="row pt-4">
 
-                        <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div className="col-12">
                             <div className="footer-widget">
-                                <h3 className="footer-title">About Nicole Carter</h3>
+                                <h3 className="footer-title mb-4">About Nicole Carter</h3>
                                 <p>
                                     {props.state.app.config().global.footer.aboutMessage}
                                 </p>
-                                <div className="">
-                                    <ul>
-                                        <li><div className=""><i className="fa fa-envelope-open"></i></div><div
-                                            className="footer-address">info@nicolecartercleaning.com</div></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div className="footer-widget">
-                                <h3 className="footer-title">Our Services</h3>
-                                <ul>
-                                    <li><a href="#">Home Cleaning </a></li>
-                                    <li><a href="#">Office Cleaning </a></li>
-                                    <li><a href="#">Commercial Cleaning</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div className=" col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                            <div className="footer-widget">
-                                <h3 className="footer-title">Quick Links</h3>
-                                <ul>
-                                    <li><a href="#">About us </a></li>
-                                    <li><a href="#">Services </a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Testimonials </a></li>
-                                    <li> <a href="#">Pricing</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-2 col-md-3 col-sm-2 col-xs-12 ">
-                            <div className="footer-widget">
-                                <h3 className="footer-title">Share With us</h3>
-                                <div className="footer-social"> <a href="#"><span><i className="fa fa-facebook"></i></span></a> <a
-                                    href="#"><span><i className="fa fa-google-plus"></i></span> </a> <a href="#"><span
-                                    className="active"><i className="fa fa-twitter"></i> </span></a> <a href="#"><span><i
-                                    className=" fa fa-pinterest"></i> </span></a> <a href="#"><span><i
-                                    className="fa fa-linkedin"></i></span></a> </div>
                             </div>
                         </div>
                     </div>
@@ -141,7 +100,7 @@ function Page(props) {
             <div className="tiny-footer">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-12">copyright@cleaning. All right reserved</div>
+                        <div className="col-md-12">Created in 2022 by <a className="text-white" href="https://jdriscoll.pro/" target="_blank">John Driscoll</a> for Nicole Carter</div>
                     </div>
 
                 </div>
