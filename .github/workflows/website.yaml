@@ -2,6 +2,7 @@ name: Website
 
 env:
   make: deploy
+  GITHUB_REPOSITORY: driscollcode/nicole-carter-cleaning
 
 on:
   push:
@@ -28,6 +29,8 @@ jobs:
       - name: Github Credentials
         run: git config user.name "John Driscoll"; git config user.email "jddcode.github@jdd.email"
       - name: Deployment
-        run: git config --global url."https://${{ secrets.GH_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"; git config user.name "John Driscoll"; git config user.email "jddcode.github@jdd.email"; npm run deploy
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git 
+          npm run deploy
         env:
-          CI: ""
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
