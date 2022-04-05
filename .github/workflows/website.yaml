@@ -1,0 +1,34 @@
+name: Website
+
+env:
+  path: website
+  make: deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - website/**
+
+jobs:
+  publish:
+    name: Website
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Repo Checkout
+        uses: actions/checkout@v2
+      - name: Install Github Access Token
+        run: git config --global url."https://${{ secrets.GH_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
+      - name: Install Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+      - name: Setup
+        run: cd $path; npm install
+      - name: Github Credentials
+        run: git config user.name "John Driscoll"; git config user.email "jddcode.github@jdd.email"
+      - name: Deployment
+        run: cd $path; npm run deploy
+        env:
+          CI: ""

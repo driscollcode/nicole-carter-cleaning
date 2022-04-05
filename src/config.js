@@ -13,18 +13,18 @@ pages:
         title: Why Use Nicole Carter
         subtitle: A friendly and flexible service provided by a hardworking entrepreneur who stands by the quality of her work
         reasons:
-          - title: Hard Working
-            content: Your satisfaction is extremely important to me and I stand by the quality of my work
-          - title: Fast & Effective Service
+          - title: Highly Skilled
+            content: I have a high degree of knowledge relating to cleaning products and chemicals
+          - title: Fast & Effective
             content: I am available at short notice and can work to your timeframe to make sure your premises are spotless
-          - title: Third Reason
-            content: third reason content
-          - title: Fourth Reason
-            content: fourth reason content
-          - title: Fifth Reason
-            content: fifth reason content
-          - title: Sixth Reason
-            content: sixth reason content
+          - title: Attention To Detail
+            content: I have a high degree of attention to detail and can prepare and follow a cleaning routine if you have one.
+          - title: Excellent Physical Fitness
+            content: I am in excellent physical condition and can stand, walk and bend for long periods of time
+          - title: Great Organisational Skills
+            content: I have a very organised mind and can clean your home methodically and ensure all areas are spotless
+          - title: Eco Friendly Products
+            content: I care about the environment and like to use eco friendly products as part of my service
       testimonials:
         title: Listen to what my customers have to say
         comments:
