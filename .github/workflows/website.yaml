@@ -28,6 +28,6 @@ jobs:
       - name: Github Credentials
         run: git config user.name "John Driscoll"; git config user.email "jddcode.github@jdd.email"
       - name: Deployment
-        run: npm run deploy
+        run: git config user.name "John Driscoll"; git config user.email "jddcode.github@jdd.email"; npm run deploy
         env:
           CI: ""
