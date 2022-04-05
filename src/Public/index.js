@@ -6,7 +6,6 @@ export default class Index extends Component {
     constructor(props) {
         super(props)
         this.state = props.state;
-		
     }
 
     render() {
@@ -31,7 +30,7 @@ export default class Index extends Component {
 							<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<div className="section-title">
 
-									<h1>{this.state.app.config().pages.homepage.title}</h1>
+									<h1>{this.state.app.config().pages.homepage.title}a</h1>
 									<p>{this.state.app.config().pages.homepage.subtitle}</p>
 								</div>
 
