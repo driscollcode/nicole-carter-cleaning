@@ -33,7 +33,7 @@ jobs:
           git config user.name "John Driscoll"
           git config user.email "jddcode.github@jdd.email"
           git config --global url."https://${GITHUB_TOKEN}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
-          git remote set-url origin "https://jddcode:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}"
+          git remote set-url origin "https://jddcode:${{ secrets.GH_TOKEN }}@github.com/driscollcode/nicole-carter-cleaning"
           npm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
