@@ -56,7 +56,7 @@ services:
     Description: A basic clean of your house
     Image: /img/clean-01.jpg
     Sessions: 1
-    Price: 40
+    Price: 50
     Hours: 4
   - Name: Deep Clean
     Description: A really deep clean of your house
